@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+//  Responsive breakpoints
+$S: 480px; // Small phones Styles are written for this breakpoint by default, so no need to specify it.
+$M: 768px; // Phablets
+$L: 992px; // 10" Tablets and desktops
+$XL: 1200px; // 10" Tablets and desktops..
+
+//  Colors
+$colorPrimary   : #424242;
+$colorAccent    : #69a55f;
+$colorDefault   : #c0aa6b;
+$colorDeepGreen : #317d4e;
+$colorBlack     : #000000;
+$colorWhite     : #ffffff;
+$colorGray      : #f9f9f9;
+$colorDarkGray  : #e9ebee;
+$colorTrans     : rgba(255,255,255,0);
+$colorAccentTrans   : rgba(105,165,95,0.9);
+
+//  Fonts
+$bodyFont: 'museosansrounded-500',Open Sans, sans-serif;
+$headerFont: "montserrat-regular", Open Sans, sans-serif;
+
+//  WebFonts
+@font-face {
+    font-family: 'montserrat-regular';
+    src: url('montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museosansrounded-500';
+    src: url('museosansrounded-500.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+
+}

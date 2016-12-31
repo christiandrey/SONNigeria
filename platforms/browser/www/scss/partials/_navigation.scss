@@ -1,0 +1,166 @@
+.navPage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../img/image.son.bottomoverlay.png');
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    a {
+      text-decoration: none !important;
+    }
+
+    .navHeader {
+        height: 54px;
+        border-bottom: $colorDarkGray solid 1px;
+        box-sizing: content-box;
+
+        .navTitle {
+            font-size: 16px;
+            line-height: 1;
+            margin: 19px auto;
+        }
+    }
+
+    .navContentWrapper {
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+        position: relative;
+
+        .navContentPseudoWrapper {
+          width: 200%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: left 0.45s;
+          transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+        }
+
+        .navContent {
+            width: 50%;
+            height: 100%;
+            float: left;
+            position: absolute;
+            padding-top: 15px;
+
+            .row {
+                height: 30%;
+                width: 80%;
+                margin: auto 10%;
+                margin-top: 10px;
+            }
+        }
+
+        .page1 {
+            top: 0;
+            left: 0;
+
+            a {
+                img {
+                    width: 65%;
+                    height: auto;
+                    margin: auto;
+                }
+
+                p {
+                    margin-top: 8px;
+                    font-size: 11px;
+                    text-decoration: none;
+                    color: $colorPrimary;
+                }
+            }
+        }
+
+        .page2 {
+            top: 0;
+            left: 50%;
+
+            a {
+                img {
+                    width: 65%;
+                    height: auto;
+                    margin: auto;
+                }
+
+                p {
+                    margin-top: 8px;
+                    font-size: 11px;
+                    text-decoration: none;
+                    color: $colorPrimary;
+                }
+            }
+        }
+    }
+
+    .navInnerPage {
+        width: 100%;
+        height: 80%;
+        background-color: $colorWhite;
+        overflow-y: scroll;
+
+        .navInnerItem {
+            border-bottom: $colorDarkGray solid 1px;
+            box-sizing: content-box;
+            line-height: 1;
+            font-size: 16px;
+            padding: 19px 0;
+            margin: 0 auto;
+            display: block;
+            text-decoration: none;
+            // background-color: $colorWhite;
+            color: $colorAccent;
+        }
+
+        .navBackItem {
+          border-bottom: $colorDarkGray solid 1px;
+          box-sizing: content-box;
+          line-height: 1;
+          font-size: 16px;
+          padding: 19px 0;
+          margin: 0 auto;
+          display: block;
+          text-decoration: none;
+          background-color: $colorAccent;
+          color: $colorWhite;
+        }
+    }
+
+    // .standardsDevInnerPage, .departmentsInnerPage, .sonServicesInnerPage, .contactSONInnerPage, .aboutUsInnerPage {
+    //   position: relative;
+    //   top: 0;
+    //   left: 50%;
+    //   transition: left 0.45s;
+    //   transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+    // }
+    //
+    // .navInnerPageAnimation {
+    //   left: 0%;
+    // }
+
+    .navPageIndicator {
+        width: 100%;
+        height: 20px;
+        margin-top: 10px;
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            margin: 5px 0;
+        }
+
+        .indicatorWrapper {
+            width: 25px;
+            height: 20px;
+            margin: auto;
+        }
+
+        .page1, .page2 {
+            @extend .indicator;
+            display: inline-block;
+        }
+    }
+}

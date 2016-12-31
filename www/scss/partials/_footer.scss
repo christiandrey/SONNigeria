@@ -1,0 +1,48 @@
+.footerContent {
+        width: 100%;
+
+        .row {
+            @include MQ(M){
+                a, p, h1, h2, h3, h4, h5, h6 {
+                    text-align: left
+                }
+            }
+            .footerItem {
+                padding: 10px auto;
+                margin: 30px auto;
+
+                .footerImg {
+                    height: 100px;
+                    width: auto;
+                    margin-bottom: 30px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $colorDarkGray;
+
+                    p {
+                        margin: 0;
+                        padding: 5px 0;
+                    }
+                }
+                a:after {
+                    content: '';
+                    width: 0px;
+                    height: 3px;
+                    margin: auto;
+                    background-color: $colorTrans;
+                    display: block;
+                    margin-top: -5px;
+                    transition: width 0.4s;
+                    @include MQ(M){
+                        margin-left: 0px;
+                    }
+                }
+                a:hover:after {
+                    width: 30px;
+                    background-color: $colorAccent;
+                }
+            }
+        }
+    }

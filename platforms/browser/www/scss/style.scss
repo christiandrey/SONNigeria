@@ -1,0 +1,642 @@
+// compileExpanded: ../css/style.css
+@import "partials/variables.scss";
+@import "partials/mixins.scss";
+@import "partials/base.scss";
+@import "partials/navigation.scss";
+
+.buttonBase {
+    width: 160px;
+    height: 40px;
+    padding: 5px auto;
+    border-radius: 20px;
+}
+
+.buttonBase:focus {
+    outline: none;
+}
+
+.outlineButton {
+    @extend .buttonBase;
+    color: $colorWhite;
+    background-color: $colorTrans;
+    border: solid 1px $colorWhite;
+}
+
+.filledButton {
+    @extend .buttonBase;
+    border: none
+}
+
+.landingPage {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/image.son.bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .topSection {
+        width: 100%;
+        height: 80%;
+        display: block;
+
+        .sonLogo {
+            width: 250px;
+            height: 250px;
+            margin: auto;
+            display: block;
+            position: relative;
+            @include center(y);
+        }
+    }
+
+    .bottomSection {
+        width: 100%;
+        height: 20%;
+        display: block;
+
+        .loadingIcon {
+            width: 40px;
+            height: 40px;
+            margin: auto;
+            display: block;
+            position: relative;
+            @include center(y);
+        }
+
+        .continue {
+            margin: auto;
+            display: block;
+            position: relative;
+            @include center(y);
+        }
+    }
+}
+
+.articlePage {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+    .pageHeader {
+        height: 54px;
+        width: 100%;
+        position: fixed;
+        z-index: +10;
+        border-bottom: $colorDarkGray solid 1px;
+        box-sizing: content-box;
+
+        // .hamburgerWrapper {
+        //     width: 20px;
+        //     height: 20px;
+        //     margin: 17px auto;
+        //     overflow: auto;
+        //
+        //     .ham {
+        //         height: 3px;
+        //         display: block;
+        //         width: 100%;
+        //         border-radius: 6px;
+        //         background-color: $colorPrimary;
+        //     }
+        //
+        //     .ham1 {
+        //         @extend .ham;
+        //         margin-top: 0
+        //     }
+        //
+        //     .ham2 {
+        //         @extend .ham;
+        //         width: 80%;
+        //         margin-left: 0%;
+        //         margin-top: 5.5px
+        //     }
+        //
+        //     .ham3 {
+        //         @extend .ham;
+        //         margin-top: 5.5px;
+        //     }
+        // }
+
+        .pageTitle {
+            font-size: 13px;
+            line-height: 1;
+            margin: 20.5px auto;
+        }
+    }
+
+    .subPageHeader {
+        width: 100%;
+        line-height: 1;
+        padding: 10px 30px;
+        color: $colorWhite;
+        background-color: $colorAccentTrans;
+        position: fixed;
+        top: 54px;
+        left: 0;
+        text-align: center;
+        z-index: +10;
+        display: none;
+    }
+
+    .articleHero {
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        position: relative;
+        margin-top: 54px;
+        position: fixed;
+        z-index: -10;
+
+        .articleTitleWrapper {
+            width: 100%;
+            height: 120px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $colorAccentTrans;
+
+            .articleTitle {
+                font-size: 24px;
+                position: relative;
+                @include center(y);
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+
+    .articleContent {
+        margin: 35px 0 0;
+        padding: 30px 30px 0;
+        width: 100%;
+        line-height: 2;
+        font-size: 12px;
+        margin-top: 354px;
+        z-index: +20;
+        overflow-x: hidden;
+    }
+}
+
+.navIframe {
+  width: 100%;
+  // height: calc(100% - 54px);
+  height: 100%;
+  position: fixed;
+  top: 54px;
+  left: -100%;
+  z-index: +11;
+  -webkit-transition: left 0.45s;
+  -webkit-transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1)
+}
+
+.navIframeAnimation {
+  left: 0%;
+}
+
+.homePage {
+  .articleHero {
+    background-image: url('../img/article.images/slide1.jpg');
+  }
+
+  .qualityMarks {
+    .qualityMarksItem {
+      padding: 20px 20px;
+      border-bottom: solid 1px $colorAccent;
+    }
+    .sectionHead {
+      font-family: $headerFont;
+      text-align: center;
+      margin: 0 -30px 10px;
+      padding: 0 30px;
+
+    }
+
+    .sectionImg {
+      height: 100px;
+      width: 100px;
+      margin: 0 auto;
+    }
+
+    .sectionTitle {
+      margin: 10px auto 0;
+      font-size: 120%;
+    }
+
+    .sectionText {
+      margin: 10px auto 0;
+    }
+
+    .sectionButton {
+      margin: 10px auto 0;
+    }
+
+    .markImage {
+      text-decoration: none;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .partnersAffiliates {
+    margin: 35px 0 0;
+
+    .sectionHead {
+      font-family: $headerFont;
+      text-align: center;
+      margin: 0 -30px 10px;
+      padding: 0 30px;
+    }
+
+    .partnerItem {
+      display: inline-block;
+      margin-bottom: 15px;
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.aboutSON {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+
+  .dgImage {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+}
+
+.missionPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+
+  blockquote {
+
+  }
+}
+
+.mandatePage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.aboutDGSONPage {
+  .articleHero {
+    background-image: url('../img/article.images/dg-son.jpg');
+  }
+}
+
+.csrPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.brandPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.mgmtTeamPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+
+  .mgmtTeamArticle {
+    .teamMember {
+      margin-bottom: 30px;
+
+      .teamImg {
+        height: 200px;
+        width: auto;
+        margin: auto;
+      }
+
+      .teamImg + p {
+        font-size: 120%;
+        margin: 15px auto 5px;
+        line-height: 1.2;
+      }
+
+      .teamImg + p + p {
+        font-size: 100%;
+        margin: 0 auto 5px;
+        line-height: 1;
+      }
+
+      .teamImg + p + p + p {
+        font-size: 80%;
+        line-height: 0.8
+      }
+    }
+
+    .teamMember:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.aboutOurStandardsPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.technicalCommitteePage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.standardsdevPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.wtotbtPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.codexPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.standardizationPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.operationsPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.inspectoratePage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.laboratoryPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.planningPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.legalPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.mgmtsystcertPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.financePage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.humanresourcePage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.metrologyPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.standardsPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+
+  .learnMore {
+    margin: auto;
+    margin-top: 15px;
+    position: relative;
+    @include center(x);
+  }
+}
+
+.productcertPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.mancapPage {
+  .articleHero {
+    background-image: url('../img/article.images/image.quality.3.png');
+  }
+}
+
+.soncapPage {
+  .articleHero {
+    background-image: url('../img/article.images/image.quality.4.png');
+  }
+}
+
+.trainingAdvisoryPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.enforcementPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.metrologyServicesPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.libraryServicesPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.faqPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+
+  #accordion {
+    .panel-title {
+      font-size: 12px;
+    }
+  }
+}
+
+.contactSONPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+
+  .sectionHead {
+    font-family: $headerFont;
+    text-align: center;
+    margin: 0 -30px 10px;
+    padding: 0 30px;
+  }
+}
+
+.complaintsPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+}
+
+.stateOfficePage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+
+  .sectionHead {
+    font-family: $headerFont;
+    text-align: left;
+    margin: 0 -30px 10px;
+    padding: 0 30px;
+  }
+}
+
+.laboratoryOfficePage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+
+  .sectionHead {
+    font-family: $headerFont;
+    text-align: left;
+    margin: 0 -30px 10px;
+    padding: 0 30px;
+  }
+}
+
+.regionalOfficePage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+
+  .sectionHead {
+    font-family: $headerFont;
+    text-align: left;
+    margin: 0 -30px 10px;
+    padding: 0 30px;
+  }
+}
+
+.qualityMarkPage {
+  .articleHero {
+    background-image: url('../img/article.images/image.quality.1.png');
+  }
+}
+
+.qualityAwardPage {
+  .articleHero {
+    background-image: url('../img/article.images/image.quality.2.png');
+  }
+}
+
+.socialNetworkPage {
+  .articleHero {
+    background-image: url('../img/article.images/headerimage.aboutson.jpg');
+  }
+  .socialImage {
+    width: 64px;
+    height: 64px;
+    margin: auto;
+  }
+  .socialImage + p {
+    margin: 10px auto;
+  }
+}
+
+.sonWebsites {
+  margin: 35px 0 15px;
+
+  .sectionHead {
+    font-family: $headerFont;
+    text-align: center;
+    margin: 0 -30px 10px;
+    padding: 0 30px;
+  }
+
+  .sonWebsiteItem {
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+    margin-bottom: 2px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .sonWebsiteItem:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.otherWebsites {
+  margin: 35px 0 0;
+
+  .sectionHead {
+    font-family: $headerFont;
+    text-align: center;
+    margin: 0 -30px 10px;
+    padding: 0 30px;
+  }
+
+  .otherWebsiteItem {
+    display: block;
+    padding: 5px 0;
+    margin: 5px 0;
+    text-align: left;
+    text-decoration: none;
+    color: $colorPrimary;
+  }
+}
+
+.footer {
+  text-align: left;
+  margin: 5px -30px 0;
+  padding: 0 30px;
+  font-size: 10px;
+}

@@ -1,0 +1,79 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+    font-family: $bodyFont;
+    @include font-smoothing;
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headerFont;
+}
+
+.fgWhite {
+    color: $colorWhite
+}
+
+.bgWhite {
+    background-color: $colorWhite
+}
+
+.fgPrimary {
+    color: $colorPrimary
+}
+
+.bgPrimary {
+    background-color: $colorPrimary
+}
+
+.fgDefault {
+    color: $colorDefault
+}
+
+.bgDefault {
+    background-color: $colorDefault
+}
+
+.fgDeepGreen {
+    color: $colorDeepGreen
+}
+
+.bgDeepGreen {
+    background-color: $colorDeepGreen
+}
+
+.fgAccent{
+    color: $colorAccent
+}
+
+.bgAccent{
+    background-color: $colorAccent
+}
+
+.fgGray {
+    color: $colorGray
+}
+
+.bgGray {
+    background-color: $colorGray
+}
+
+.fgDarkGray {
+    color: $colorDarkGray
+}
+
+.bgDarkGray {
+    background-color: $colorDarkGray
+}
+
+
+//Animations
